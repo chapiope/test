@@ -103,6 +103,8 @@ function draw_arrow() {
   context.lineCap = "round";
   context.lineWidth = 3;
   context.stroke();
+  context.fillText("1month ago", 50, 310);
+  context.fillText("now", 400, 310);
 }
 
 function draw_arrow2() {
@@ -117,6 +119,9 @@ function draw_arrow2() {
     context2.lineCap = "round";
     context2.lineWidth = 4;
     context2.stroke();
+    context2.fillStyle = "#dedede";
+    context2.fillText("1month ago", 50, 310);
+    context2.fillText("now", 400, 310);
 
     context2.strokeStyle = "black";
     context2.beginPath();
@@ -129,6 +134,9 @@ function draw_arrow2() {
     context2.lineCap = "round";
     context2.lineWidth = 3;
     context2.stroke();
+    context2.fillStyle = "black";
+    context2.fillText("1month ago", 50, 310);
+    context2.fillText("now", 600, 310);
   }
 
 
