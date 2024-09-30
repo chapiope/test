@@ -133,7 +133,7 @@ function draw_arrow2() {
     context2.stroke();
     context2.fillStyle = "black";
     context2.fillText("past", 50, 320);
-    context2.fillText("future", 600, 320);
+    context2.fillText("future", 550, 320);
   }
 
 
