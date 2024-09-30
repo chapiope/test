@@ -103,8 +103,8 @@ function draw_arrow() {
   context.lineCap = "round";
   context.lineWidth = 3;
   context.stroke();
-  context.fillText("1month ago", 50, 310);
-  context.fillText("now", 400, 310);
+  context.fillText("1month ago", 50, 320);
+  context.fillText("now", 400, 320);
 }
 
 function draw_arrow2() {
@@ -132,8 +132,8 @@ function draw_arrow2() {
     context2.lineWidth = 3;
     context2.stroke();
     context2.fillStyle = "black";
-    context2.fillText("past", 50, 310);
-    context2.fillText("future", 600, 310);
+    context2.fillText("past", 50, 320);
+    context2.fillText("future", 600, 320);
   }
 
 
