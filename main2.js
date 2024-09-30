@@ -33,6 +33,7 @@ document.querySelector('#collect-button2').addEventListener('click', function(ev
         draw_arrow2();
         part2.classList.remove("hidden");
         botan = "done";
+        part2.scrollIntoView({ behavior: "smooth" });
     }
 });
 
