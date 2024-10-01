@@ -7,7 +7,7 @@
     <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
     <link href = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap" rel = "stylesheet">
 
-    <script src = "main.js" async></script>
+    <script src = "main2.js" async></script>
     <link rel = "stylesheet" href = "index.css"> 
   </head>
 
@@ -23,7 +23,7 @@
 
       <div id = "fade-in-element" class = "graph">   
 
-        <h1>二次関数のグラフを描いてみよう</h1>
+        <h1>急にうれしいことが起きた！どう表す？</h1>
       
         <div>
           <canvas id = "draw-area" width = "500px" height = "350px"
@@ -31,28 +31,31 @@
           </canvas>
         </div>
 
-        <div>
-          <button id = "clear-button">全消し</button>
-          <button id = "collect-button">完成</button>
+        <div class = "flex">
+          <button id = "btn11"><img src = "graph5.png" width = "100%"></button>
+          <button id = "btn12"><img src = "graph6.png" width = "100%"></button>
+          <button id = "btn13"><img src = "graph7.png" width = "100%"></button>
         </div>
 
-        <div id = "btn1" class = "hidden"> 
-          <h1>どのグラフが描いたグラフに近い？</h1>
-          <input type = "radio" id = "11" name = "a" value = "v1" class = "radio1">
-          <label for = "11"><img src = "graph1.png" width = "20%"></label>
+        <button id = "btn2" class = "hidden">OK</button>
 
-          <input type = "radio" id = "12" name = "a" value = "v2" class = "radio1">
-          <label for = "12"><img src = "graph2.png" width = "20%"></label>
-
-          <input type = "radio" id = "13" name = "a" value = "v3" class = "radio1">
-          <label for = "13"><img src = "graph3.png" width = "20%"></label>
+        <div id = "btn3" class = "hidden">
+          <h2>\ tips / <br> 関数は連続じゃなくてもいい</h2>
+          <div class = "flex">
+            <div class = "explain">
+              <img src = "graph5.png" width = "100%">
+              <p>徐々に嬉しさがこみ上げる感じ</p>
+            </div>
+            <div class = "explain">
+              <img src = "graph6.png" width = "100%">
+              <p>爆発的に嬉しさがこみ上げて <br> ゆっくり元に戻る</p>
+            </div>
+            <div class = "explain">
+              <img src = "graph7.png" width = "100%">
+              <p>一瞬の嬉しさ！</p>
+            </div>
+          </div>
           <br>
-          <button id = "btn12" class = "hidden">OK</button>
-        </div>
-
-
-        <div id = "btn2" class = "hidden">
-          <h2>\ tips / 指数関数的か対数関数的な右肩上がりでは全然違う！</h2>
           <a href = "index3.html">OK</a>
 
         </div>  
