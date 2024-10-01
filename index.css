@@ -42,4 +42,14 @@ h2 {
   font-weight: 700;
 }
 
+.flex {
+  display: flex;
+}
+
+.explain {
+  background-color: white;
+  padding: 5px;
+  margin: 1px;
+}
+
 
