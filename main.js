@@ -8,6 +8,7 @@ element.style.transition = "opacity 1s ease-in-out";
 
 window.addEventListener("load", function() {
   element.style.opacity = "1";
+  draw_arrow();
 });
 
 var botan = "none";
@@ -82,9 +83,7 @@ OKButton.addEventListener("click", () => {
   }
 });
 
-window.addEventListener('load', () => {
-  draw_arrow();
-});
+
 
 //軸の矢印を描画
 function draw_arrow() {
@@ -125,8 +124,3 @@ btn12.addEventListener("click", (event) => {
   btn2.classList.remove("hidden");
   btn2.scrollIntoView({ behavior: "smooth" });
 });
-
-
-
-
-
