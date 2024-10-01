@@ -1,43 +1,5 @@
-var canvas = document.querySelector('#draw-area');
-var canvas2 = document.querySelector('#draw-area2');
-var context = canvas.getContext('2d');
-var context2 = canvas2.getContext('2d');
-var part2 = document.getElementById("part2");
-var botan = "none";
-var botan2 = "none";
-
-canvas.addEventListener('mousedown', function(ev){
-    if (botan === "none") {
-        context.beginPath();
-        context.moveTo(ev.offsetX, ev.offsetY);
-        botan2 = "done"; 
-    }
-});
-
-canvas.addEventListener('mousemove', function(ev){
-    if(ev.which){
-        if (botan === "none") {
-            context.lineTo(ev.offsetX, ev.offsetY);
-            context.stroke();
-            botan2 = "done"; 
-        }
-    }
-});
-
-document.querySelector('#collect-button2').addEventListener('click', function(ev){
-    if (botan2 === "done") {
-        
-        var image = context.getImageData(0, 0, canvas.width, canvas.height);
-        
-        context2.putImageData(image, 100, 0);
-        draw_arrow2();
-        part2.classList.remove("hidden");
-        botan = "done";
-        part2.scrollIntoView({ behavior: "smooth" });
-    }
-});
-
-
+const canvas = document.querySelector("#draw-area");
+const context = canvas.getContext("2d");
 
 
 const element = document.getElementById("fade-in-element");
@@ -46,50 +8,110 @@ element.style.transition = "opacity 1s ease-in-out";
 
 window.addEventListener("load", function() {
   element.style.opacity = "1";
-});
-
-
-canvas2.addEventListener('mousedown', function(ev){
-    context2.beginPath();
-    context2.moveTo(ev.offsetX, ev.offsetY);
-});
-
-canvas2.addEventListener('mousemove', function(ev){
-    if(ev.which){
-        context2.lineTo(ev.offsetX, ev.offsetY);
-        context2.stroke();
-        
-    }
-});
-
-
-
-//パソコンでクリックしてる間だけ描けるようにした機能
-canvas.addEventListener("mousedown", () => {
-  context.beginPath();
-  isDrag = true;
-});
-canvas.addEventListener("mouseup", () => {
-  context.closePath();
-  isDrag = false;
-});
-
-
-
-//お絵かきするところをきれいにする機能
-const clearButton = document.querySelector("#clear-button");
-clearButton.addEventListener("click", () => {
-  if (botan === "none") {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    draw_arrow();
-  }
-});
-
-
-
-window.addEventListener('load', () => {
   draw_arrow();
+  text();
 });
+
+
+var btn2 = document.getElementById("btn2");
+var btn3 = document.getElementById("btn3");
+
+
+const Button11 = document.querySelector("#btn11");
+Button11.addEventListener("click", () => {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  text();
+  draw_arrow();
+  context.beginPath();
+  context.moveTo(50, 280);
+  context.bezierCurveTo(50, 280, 180, 280, 200, 260);
+  context.bezierCurveTo(220, 180, 250, 50, 250, 60);
+  context.bezierCurveTo(250, 50, 250, 180, 300, 260);
+  context.bezierCurveTo(320, 280, 450, 270, 450, 270);
+  context.lineWidth = 3;
+  context.stroke();
+
+  btn2.classList.remove("hidden");
+});
+
+const Button12 = document.querySelector("#btn12");
+Button12.addEventListener("click", () => {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  text();
+  draw_arrow();
+  context.beginPath();
+  context.moveTo(50, 250);
+  context.bezierCurveTo(50, 250, 220, 250, 250, 230);
+  context.lineWidth = 3;
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "#dedede";
+  context.arc(250, 230, 3, 0, 2 * Math.PI);
+  context.fill();
+  context.stroke();
+  
+  context.beginPath();
+  context.moveTo(250, 60);
+  context.bezierCurveTo(250, 50, 250, 180, 300, 260);
+  context.bezierCurveTo(320, 280, 450, 270, 450, 270);
+  context.lineWidth = 3;
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "black";
+  context.arc(250, 60, 3, 0, 2 * Math.PI);
+  context.fill();
+
+  btn2.classList.remove("hidden");
+});
+
+const Button13 = document.querySelector("#btn13");
+Button13.addEventListener("click", () => {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  text();
+  draw_arrow();
+  context.beginPath();
+  context.moveTo(50, 250);
+  context.bezierCurveTo(50, 250, 220, 250, 250, 230);
+  context.lineWidth = 3;
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "#dedede";
+  context.arc(250, 230, 3, 0, 2 * Math.PI);
+  context.fill();
+  context.stroke();
+  
+  context.beginPath();
+  context.moveTo(250, 60);
+  context.lineTo(280, 60);
+  context.lineWidth = 3;
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "#dedede";
+  context.arc(280, 60, 3, 0, 2 * Math.PI);
+  context.fill();
+  context.stroke();
+
+
+  context.beginPath();
+  context.moveTo(280, 230);
+  context.bezierCurveTo(320, 280, 450, 270, 450, 270);
+  context.lineWidth = 3;
+  context.stroke();
+
+  context.beginPath();
+  context.fillStyle = "black";
+  context.arc(280, 230, 3, 0, 2 * Math.PI);
+  context.fill();
+
+  btn2.classList.remove("hidden");
+});
+
+
+
 
 //軸の矢印を描画
 function draw_arrow() {
@@ -103,39 +125,36 @@ function draw_arrow() {
   context.lineCap = "round";
   context.lineWidth = 3;
   context.stroke();
-  context.fillText("1month ago", 50, 320);
-  context.fillText("now", 400, 320);
+
+  context.beginPath();
+  context.moveTo(50, 300);
+  context.lineTo(50, 100);
+  context.moveTo(50, 100);
+  context.lineTo(30, 120);
+  context.moveTo(50, 100);
+  context.lineTo(70, 120);
+  context.lineCap = "round";
+  context.lineWidth = 3;
+  context.stroke();
+  context.fillText("嬉しい度", 70, 140);
 }
 
-function draw_arrow2() {
-    context2.strokeStyle = "#dedede";
-    context2.beginPath();
-    context2.moveTo(150, 300);
-    context2.lineTo(550, 300);
-    context2.moveTo(550, 300);
-    context2.lineTo(530, 280);
-    context2.moveTo(550, 300);
-    context2.lineTo(530, 320);
-    context2.lineCap = "round";
-    context2.lineWidth = 4;
-    context2.stroke();
-
-    context2.strokeStyle = "black";
-    context2.beginPath();
-    context2.moveTo(50, 300);
-    context2.lineTo(650, 300);
-    context2.moveTo(650, 300);
-    context2.lineTo(630, 280);
-    context2.moveTo(650, 300);
-    context2.lineTo(630, 320);
-    context2.lineCap = "round";
-    context2.lineWidth = 3;
-    context2.stroke();
-    context2.fillStyle = "black";
-    context2.fillText("past", 50, 320);
-    context2.fillText("future", 550, 320);
-  }
+function text() {
+  context.fillText("嬉しいことが", 250, 320);
+  context.fillText("起きた！", 250, 340);
+  context.beginPath();
+  context.setLineDash([5, 15]);
+  context.moveTo(250, 300);
+  context.lineTo(250, 20);
+  context.lineWidth = 1;
+  context.stroke();
+  context.setLineDash([]);
+}
 
 
 
 
+btn2.addEventListener("click", (event) => {
+  btn3.classList.remove("hidden");
+  btn3.scrollIntoView({ behavior: "smooth" });
+});
