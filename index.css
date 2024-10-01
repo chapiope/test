@@ -1,0 +1,55 @@
+.hidden {
+  display: none;
+}
+
+.selected {
+    border: 5px solid #333;
+  }
+
+
+
+input[type="radio"]:checked + label > img {
+   outline:2px solid #c6e400;
+}
+
+.radio1 {
+    display: none;
+  }
+
+* { /*全てに適用*/
+    font-family: "IBM Plex Sans JP";
+    text-decoration: none;
+}
+
+.graph {
+  background-color: #dedede;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 300px;
+
+}
+
+h1 {
+  padding-top: 50px;
+  text-align: center;
+}
+
+h2 {
+  padding-top: 200px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+}
+
+.explain {
+  background-color: white;
+  padding: 5px;
+  margin: 1px;
+}
+
+

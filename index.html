@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&display=swap" rel = "stylesheet">
+
+    <script src = "main.js" async></script>
+    <link rel = "stylesheet" href = "index.css"> 
+  </head>
+
+  <body>
+
+    <header>
+
+    </header>
+
+
+
+    <main>
+
+      <div id = "fade-in-element" class = "graph">   
+
+        <h1>右肩上がりのグラフを描いてみよう</h1>
+      
+        <div>
+          <canvas id = "draw-area" width = "500px" height = "350px"
+          style = "border: 1px solid #000000">
+          </canvas>
+        </div>
+
+        <div>
+          <button id = "clear-button">全消し</button>
+          <button id = "collect-button">完成</button>
+        </div>
+
+        <div id = "btn1" class = "hidden"> 
+          <h1>どのグラフが描いたグラフに近い？</h1>
+          <input type = "radio" id = "11" name = "a" value = "v1" class = "radio1">
+          <label for = "11"><img src = "graph1.png" width = "20%"></label>
+
+          <input type = "radio" id = "12" name = "a" value = "v2" class = "radio1">
+          <label for = "12"><img src = "graph2.png" width = "20%"></label>
+
+          <input type = "radio" id = "13" name = "a" value = "v3" class = "radio1">
+          <label for = "13"><img src = "graph3.png" width = "20%"></label>
+          <br>
+          <button id = "btn12" class = "hidden">OK</button>
+        </div>
+
+
+        <div id = "btn2" class = "hidden">
+          <h2>\ tips / <br> 右肩上がりでも直線と曲線では全然違う！</h2>
+          <img src = "graph4.png" width = "60%">
+          <p>グラフの前後でどう変化するかも予想してみよう◎</p>
+          <br>
+          <a href = "index2.html">OK</a>
+
+        </div>  
+
+      </div>
+
+
+
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+
+  </body>
+  
+</html>
