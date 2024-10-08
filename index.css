@@ -17,7 +17,7 @@ input[type="radio"]:checked + label > img {
   }
 
 * { /*全てに適用*/
-    font-family: "IBM Plex Sans JP";
+    font-family: "Zen Kaku Gothic Antique";
     text-decoration: none;
 }
 
