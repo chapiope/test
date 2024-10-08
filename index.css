@@ -18,6 +18,7 @@ input[type="radio"]:checked + label > img {
 
 * { /*全てに適用*/
     font-family: "Zen Kaku Gothic Antique";
+  //フォントは全角ゴシック、これやってる私かっこいいかもみたいなイメージありつつ少し崩してる
     text-decoration: none;
 }
 
